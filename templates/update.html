@@ -37,10 +37,10 @@
         }
     </style>
 
-<body style="background: #020631">
+<body style="background: rgb(238,238,238);">
     
-    <header class="shadow" style="background-color:#4f0ff260;">
-        <div class="row text-white mb-5">
+    <header class="shadow" style="background-color:#fff;">
+        <div class="row mb-5">
             <div class="col-md-6 col-9 p-3 ps-5">
                 <h2 style="font-family: 'Roboto', sans-serif;"><a class="nav-link" href="/">ToDo</a></h2>
             </div>
@@ -55,13 +55,13 @@
                             {% if user.is_authenticated %}
                             <li class="nav-item p-3">
                                
-                            <a class="nav-link  text-white" aria-current="page" href="#">{{request.user.username}}</a>
+                            <a class="nav-link " aria-current="page" href="#">{{request.user.username}}</a>
                             </li>  
                             <li class="nav-item p-3">
-                            <a class="nav-link text-white" href="#">Tasks</a>
+                            <a class="nav-link" href="#">Tasks</a>
                             </li>
                             <li class="nav-item p-3">
-                            <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                             </li>
                             {% endif %}
                             
@@ -75,8 +75,8 @@
     <section>
         <div class="container">
         <div class="col-md-5 m-auto">
-            <div class="card rounded-4 shadow" style="background-color:#4f0ff260 ;">
-                <div class="card-body p-5 text-white text-center">
+            <div class="card rounded-4 shadow" style="background-color:#fff ;">
+                <div class="card-body p-5 text-center">
                     <form method="post" class=" justify-content-center align-items-center mb-4 ps" enctype="multipart/form-data" >
                         {% csrf_token %}
                         <div class="mb-3">
@@ -85,7 +85,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label me-5">Enter the details</label>
-                            <textarea class="form-control" name="details" id="task-detail"rows="2" placeholder="Enter the task details" style="width: 80%;">{{task.details}}</textarea>
+                            <textarea class="form-control" name="details" id="task-detail"rows="4" placeholder="Enter the task details" style="width: 80%;">{{task.details}}</textarea>
                             
                         </div>
                         <div class="mb-3">
