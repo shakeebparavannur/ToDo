@@ -6,7 +6,7 @@ from django.db import models
 
 class Task(models.Model):
     name=models.CharField(max_length=25)
-    details=models.CharField(max_length=750)
+    details=models.TextField(max_length=750)
     priority=models.CharField(max_length=500)
     date=models.DateField()
     user=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
